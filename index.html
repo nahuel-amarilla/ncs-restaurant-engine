@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garrison | Premium Dining</title>
+    <title>Garrison | Premium Dining Experience</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -21,13 +21,13 @@
 <body class="bg-garrison-green text-white font-sans overflow-x-hidden">
 
     <nav class="fixed top-8 right-8 z-[100]">
-        <button id="menu-btn" class="w-14 h-14 flex flex-col justify-center items-center gap-1.5 border border-garrison-gold rounded-full bg-black/60 hover:bg-garrison-gold group transition-all duration-300">
+        <button id="menu-btn" class="w-14 h-14 flex flex-col justify-center items-center gap-1.5 border border-garrison-gold rounded-full bg-black/60 hover:bg-garrison-gold group transition-all duration-300 focus:outline-none">
             <span class="w-6 h-0.5 bg-garrison-gold group-hover:bg-garrison-green transition-colors"></span>
             <span class="w-6 h-0.5 bg-garrison-gold group-hover:bg-garrison-green transition-colors"></span>
         </button>
     </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-garrison-green/FB z-[90] hidden flex-col items-center justify-center space-y-10 text-4xl font-serif backdrop-blur-md">
+    <div id="mobile-menu" class="fixed inset-0 bg-garrison-green/95 z-[90] hidden flex-col items-center justify-center space-y-10 text-4xl font-serif backdrop-blur-md">
         <a href="#menu" class="hover:text-garrison-gold transition">Our Menu</a>
         <a href="#about" class="hover:text-garrison-gold transition">Our Heritage</a>
         <a href="#contact" class="hover:text-garrison-gold transition">Reservations</a>
@@ -35,10 +35,10 @@
 
     <header class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <div class="hero-zoom w-full h-full bg-cover bg-center" style="background-image: url('assets/images/hero-interior.jpg');"></div>
+            <div class="hero-zoom w-full h-full bg-cover bg-center" style="background-image: url('assets/images/hero-interior.jpg.jpg');"></div>
             <div class="absolute inset-0 bg-black/50"></div>
         </div>
-        <div class="relative z-10 text-center">
+        <div class="relative z-10 text-center px-4">
             <h1 class="font-serif text-6xl md:text-8xl mb-2 tracking-tight">A Taste of Excellence</h1>
             <p class="font-serif text-3xl text-garrison-gold uppercase tracking-widest">Garrison</p>
         </div>
@@ -48,32 +48,51 @@
         <h2 class="font-serif text-5xl text-center mb-16 text-garrison-gold uppercase tracking-[0.3em]">Our Selection</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="menu-item border border-garrison-gold/20 p-2 bg-black/20">
-                <img src="assets/images/dish-1.jpg" class="w-full h-64 object-cover mb-4 shadow-xl">
+                <img src="assets/images/dish-1.jpg.jpg" class="w-full h-64 object-cover mb-4">
                 <p class="text-center text-[10px] uppercase tracking-widest font-bold text-garrison-gold">Dry-Aged Ribeye</p>
             </div>
             <div class="menu-item border border-garrison-gold/20 p-2 bg-black/20">
-                <img src="assets/images/dish-2.jpg" class="w-full h-64 object-cover mb-4 shadow-xl">
+                <img src="assets/images/dish-2.jpg.jpg" class="w-full h-64 object-cover mb-4">
                 <p class="text-center text-[10px] uppercase tracking-widest font-bold text-garrison-gold">Pistachio Crusted Lamb</p>
             </div>
             <div class="menu-item border border-garrison-gold/20 p-2 bg-black/20">
-                <img src="assets/images/dish-3.jpg" class="w-full h-64 object-cover mb-4 shadow-xl">
-                <p class="text-center text-[10px] uppercase tracking-widest font-bold text-garrison-gold">Wagyu Burger</p>
+                <img src="assets/images/dish-3.jpg.jpg" class="w-full h-64 object-cover mb-4">
+                <p class="text-center text-[10px] uppercase tracking-widest font-bold text-garrison-gold">Heritage Wagyu Burger</p>
             </div>
             <div class="menu-item border border-garrison-gold/20 p-2 bg-black/20">
-                <img src="assets/images/dish-4.jpg" class="w-full h-64 object-cover mb-4 shadow-xl">
+                <img src="assets/images/dish-4.jpg.jpg" class="w-full h-64 object-cover mb-4">
                 <p class="text-center text-[10px] uppercase tracking-widest font-bold text-garrison-gold">Black Truffle Risotto</p>
             </div>
             <div class="menu-item border border-garrison-gold/20 p-2 bg-black/20">
-                <img src="assets/images/dish-5.jpg" class="w-full h-64 object-cover mb-4 shadow-xl">
+                <img src="assets/images/dish-5.jpg.jpg" class="w-full h-64 object-cover mb-4">
                 <p class="text-center text-[10px] uppercase tracking-widest font-bold text-garrison-gold">Saffron Lobster Ravioli</p>
             </div>
             <div class="menu-item border border-garrison-gold/20 p-2 bg-black/20">
-                <img src="assets/images/dish-6.jpg" class="w-full h-64 object-cover mb-4 shadow-xl">
+                <img src="assets/images/dish-6.jpg.jpg" class="w-full h-64 object-cover mb-4">
                 <p class="text-center text-[10px] uppercase tracking-widest font-bold text-garrison-gold">Gold Leaf Tiramisu</p>
             </div>
             <div class="menu-item border border-garrison-gold/20 p-2 bg-black/20">
-                <img src="assets/images/dish-7.jpg" class="w-full h-64 object-cover mb-4 shadow-xl">
+                <img src="assets/images/dish-7.jpg.jpg" class="w-full h-64 object-cover mb-4">
                 <p class="text-center text-[10px] uppercase tracking-widest font-bold text-garrison-gold">Dark Chocolate Lava</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white text-garrison-green">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+                <h2 class="font-serif text-5xl text-stone-900">Our Heritage</h2>
+                <div class="h-1 w-20 bg-garrison-gold mb-8"></div>
+                <h3 class="font-serif text-2xl text-garrison-gold italic">Chef Dato Gogiashvili</h3>
+                <p class="text-stone-700 font-light leading-relaxed">
+                    Located in the historic **Jerusalem Square**, Garrison is a culinary sanctuary where Georgian tradition meets modern excellence. 
+                </p>
+                <p class="text-stone-700 font-light leading-relaxed">
+                    Our recipes from **Svaneti** are crafted with seasonal, foraged ingredients, creating a legacy of flavor under natural light.
+                </p>
+            </div>
+            <div class="relative">
+                <img src="assets/images/hero-interior.jpg.jpg" class="shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 rounded-sm">
             </div>
         </div>
     </section>
@@ -81,13 +100,17 @@
     <section id="contact" class="py-24 bg-garrison-green border-t border-garrison-gold/30">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
             <div class="border border-garrison-gold p-1 bg-black/10">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.124508492!2d44.8041!3d41.6901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cf72323!2sJerusalem%20Square%2C%20Tbilisi!5e0!3m2!1sen!2sge!4v1620000000000" class="w-full h-[450px] grayscale" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="http://googleusercontent.com/maps.google.com/7" class="w-full h-[450px] grayscale hover:grayscale-0 transition-all duration-500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
+
             <form action="https://formspree.io/f/xbdpdboz" method="POST" class="flex flex-col gap-4">
-                <input type="text" name="name" placeholder="Name" required class="bg-transparent border border-garrison-gold/50 p-4 outline-none focus:border-garrison-gold text-xs uppercase tracking-widest">
-                <input type="email" name="email" placeholder="Email" required class="bg-transparent border border-garrison-gold/50 p-4 outline-none focus:border-garrison-gold text-xs uppercase tracking-widest">
-                <textarea name="message" placeholder="Message" rows="6" required class="bg-transparent border border-garrison-gold/50 p-4 outline-none focus:border-garrison-gold text-xs uppercase tracking-widest"></textarea>
-                <button type="submit" class="bg-garrison-gold text-garrison-green font-bold py-5 hover:bg-white transition duration-500 uppercase text-xs tracking-[0.3em]">Send Message</button>
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="text" name="name" placeholder="First Name" required class="bg-transparent border border-garrison-gold/50 p-4 outline-none focus:border-garrison-gold transition-colors">
+                    <input type="text" name="lastname" placeholder="Last Name" required class="bg-transparent border border-garrison-gold/50 p-4 outline-none focus:border-garrison-gold transition-colors">
+                </div>
+                <input type="email" name="email" placeholder="Email Address" required class="bg-transparent border border-garrison-gold/50 p-4 outline-none focus:border-garrison-gold transition-colors">
+                <textarea name="message" placeholder="Message" rows="6" required class="bg-transparent border border-garrison-gold/50 p-4 outline-none focus:border-garrison-gold transition-colors"></textarea>
+                <button type="submit" class="bg-garrison-gold text-garrison-green font-bold py-5 hover:bg-white transition duration-500 uppercase tracking-widest">Send Message</button>
             </form>
         </div>
     </section>

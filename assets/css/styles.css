@@ -1,4 +1,4 @@
-/* EFECTO ZOOM DE ENTRADA */
+/* EFECTO ZOOM DE ENTRADA AL HERO */
 .hero-zoom {
     animation: slowZoom 15s infinite alternate ease-in-out;
 }
@@ -13,22 +13,36 @@
 }
 
 /* TIPOGRAFÍA SERIF PARA EL LUJO */
-h1, h2, h3, .font-serif {
+h1, h2, h3, h4, .font-serif {
     font-family: 'Playfair Display', serif;
 }
 
-/* SMOOTH SCROLL PARA NAVEGACIÓN */
+/* SMOOTH SCROLL PARA NAVEGACIÓN INTERNA */
 html {
     scroll-behavior: smooth;
 }
 
-/* EFECTO HOVER EN PLATOS */
-.menu-item img {
-    transition: transform 0.5s ease;
-    filter: grayscale(20%);
+/* EFECTO HOVER EN LAS TARJETAS DEL MENÚ (Platos) */
+.menu-item {
+    transition: all 0.5s ease-out;
+    overflow: hidden; /* Mantiene la imagen dentro del borde al agrandarse */
+    backface-visibility: hidden; /* Evita parpadeos en hover */
 }
 
+/* Cuando pasas el mouse por encima de la tarjeta */
+.menu-item:hover {
+    transform: translateY(-5px) scale(1.02); /* Sube un poco y se agranda 2% */
+    border-color: rgba(196, 164, 124, 0.6); /* El dorado se vuelve más visible */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+}
+
+/* Cuando pasas el mouse por encima de la imagen específicamente */
 .menu-item:hover img {
-    transform: scale(1.03);
-    filter: grayscale(0%);
+    transform: scale(1.03); /* La imagen dentro de la tarjeta se agranda 3% */
+    filter: brightness(1.1); /* Se ilumina un poco más */
+}
+
+/* Transición suave para la imagen */
+.menu-item img {
+    transition: transform 0.6s ease-out, filter 0.6s ease;
 }

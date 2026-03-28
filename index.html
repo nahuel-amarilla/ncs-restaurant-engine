@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garrison | Premium Dining Experience</title>
+    <title>Garrison | Premium Dining</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -20,17 +20,17 @@
 </head>
 <body class="bg-garrison-green text-white font-sans overflow-x-hidden">
 
-    <nav class="fixed top-8 right-8 z-50">
-        <button id="menu-btn" class="w-12 h-12 flex flex-col justify-center items-center gap-1.5 border border-garrison-gold rounded-full bg-black/40 hover:bg-garrison-gold transition-all duration-300">
-            <span class="w-6 h-0.5 bg-garrison-gold"></span>
-            <span class="w-6 h-0.5 bg-garrison-gold"></span>
+    <nav class="fixed top-8 right-8 z-[100]">
+        <button id="menu-btn" class="w-14 h-14 flex flex-col justify-center items-center gap-1.5 border border-garrison-gold rounded-full bg-black/60 hover:bg-garrison-gold group transition-all duration-300">
+            <span class="w-6 h-0.5 bg-garrison-gold group-hover:bg-garrison-green transition-colors"></span>
+            <span class="w-6 h-0.5 bg-garrison-gold group-hover:bg-garrison-green transition-colors"></span>
         </button>
     </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-garrison-green z-40 hidden flex-col items-center justify-center space-y-8 text-3xl font-serif">
-        <a href="#menu" class="hover:text-garrison-gold transition">Menu</a>
-        <a href="#about" class="hover:text-garrison-gold transition">About Us</a>
-        <a href="#contact" class="hover:text-garrison-gold transition">Contact</a>
+    <div id="mobile-menu" class="fixed inset-0 bg-garrison-green/FB z-[90] hidden flex-col items-center justify-center space-y-10 text-4xl font-serif backdrop-blur-md">
+        <a href="#menu" class="hover:text-garrison-gold transition">Our Menu</a>
+        <a href="#about" class="hover:text-garrison-gold transition">Our Heritage</a>
+        <a href="#contact" class="hover:text-garrison-gold transition">Reservations</a>
     </div>
 
     <header class="relative h-screen flex items-center justify-center overflow-hidden">
@@ -40,60 +40,53 @@
         </div>
         <div class="relative z-10 text-center">
             <h1 class="font-serif text-6xl md:text-8xl mb-2 tracking-tight">A Taste of Excellence</h1>
-            <p class="font-serif text-3xl text-garrison-gold">Garrison</p>
+            <p class="font-serif text-3xl text-garrison-gold uppercase tracking-widest">Garrison</p>
         </div>
     </header>
 
     <section id="menu" class="py-24 max-w-7xl mx-auto px-6">
-        <h2 class="font-serif text-5xl text-center mb-16 text-garrison-gold uppercase tracking-widest">Our Selection</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="menu-item border border-garrison-gold/30 p-1 bg-black/10 transition-transform duration-500">
-                <img src="assets/images/dish-1.jpg" class="w-full h-56 object-cover">
-                <div class="p-4 text-center text-[10px] uppercase tracking-[0.2em] font-bold">Dry-Aged Ribeye</div>
+        <h2 class="font-serif text-5xl text-center mb-16 text-garrison-gold uppercase tracking-[0.3em]">Our Selection</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="menu-item border border-garrison-gold/20 p-2 bg-black/20">
+                <img src="assets/images/dish-1.jpg" class="w-full h-64 object-cover mb-4 shadow-xl">
+                <p class="text-center text-[10px] uppercase tracking-widest font-bold text-garrison-gold">Dry-Aged Ribeye</p>
             </div>
-            <div class="menu-item border border-garrison-gold/30 p-1 bg-black/10 transition-transform duration-500">
-                <img src="assets/images/dish-2.jpg" class="w-full h-56 object-cover">
-                <div class="p-4 text-center text-[10px] uppercase tracking-[0.2em] font-bold">Pistachio Crusted Lamb</div>
+            <div class="menu-item border border-garrison-gold/20 p-2 bg-black/20">
+                <img src="assets/images/dish-2.jpg" class="w-full h-64 object-cover mb-4 shadow-xl">
+                <p class="text-center text-[10px] uppercase tracking-widest font-bold text-garrison-gold">Pistachio Crusted Lamb</p>
             </div>
-            <div class="menu-item border border-garrison-gold/30 p-1 bg-black/10 transition-transform duration-500">
-                <img src="assets/images/dish-3.jpg" class="w-full h-56 object-cover">
-                <div class="p-4 text-center text-[10px] uppercase tracking-[0.2em] font-bold">Wagyu Burger</div>
+            <div class="menu-item border border-garrison-gold/20 p-2 bg-black/20">
+                <img src="assets/images/dish-3.jpg" class="w-full h-64 object-cover mb-4 shadow-xl">
+                <p class="text-center text-[10px] uppercase tracking-widest font-bold text-garrison-gold">Wagyu Burger</p>
             </div>
-            <div class="menu-item border border-garrison-gold/30 p-1 bg-black/10 transition-transform duration-500">
-                <img src="assets/images/dish-4.jpg" class="w-full h-56 object-cover">
-                <div class="p-4 text-center text-[10px] uppercase tracking-[0.2em] font-bold">Black Truffle Risotto</div>
+            <div class="menu-item border border-garrison-gold/20 p-2 bg-black/20">
+                <img src="assets/images/dish-4.jpg" class="w-full h-64 object-cover mb-4 shadow-xl">
+                <p class="text-center text-[10px] uppercase tracking-widest font-bold text-garrison-gold">Black Truffle Risotto</p>
             </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-24 bg-white text-garrison-green">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="font-serif text-5xl mb-6">Our Heritage</h2>
-                <h3 class="font-serif text-2xl text-garrison-gold italic">Chef Dato Gogiashvili</h3>
-                <p class="text-stone-700 font-light leading-relaxed mb-6">
-                    A culinary sanctuary in Jerusalem Square. Garrison merges ancient Georgian secrets from Svaneti with modern culinary excellence.
-                </p>
-                <p class="text-stone-700 font-light leading-relaxed">
-                    We invite you to experience a space where natural light illuminates every plate, crafted with integrity and foraged ingredients.
-                </p>
+            <div class="menu-item border border-garrison-gold/20 p-2 bg-black/20">
+                <img src="assets/images/dish-5.jpg" class="w-full h-64 object-cover mb-4 shadow-xl">
+                <p class="text-center text-[10px] uppercase tracking-widest font-bold text-garrison-gold">Saffron Lobster Ravioli</p>
             </div>
-            <div class="relative group">
-                <img src="assets/images/hero-interior.jpg" class="shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 rounded-sm">
-                <div class="absolute -bottom-6 -left-6 w-40 h-40 border-8 border-garrison-gold -z-10 hidden md:block"></div>
+            <div class="menu-item border border-garrison-gold/20 p-2 bg-black/20">
+                <img src="assets/images/dish-6.jpg" class="w-full h-64 object-cover mb-4 shadow-xl">
+                <p class="text-center text-[10px] uppercase tracking-widest font-bold text-garrison-gold">Gold Leaf Tiramisu</p>
+            </div>
+            <div class="menu-item border border-garrison-gold/20 p-2 bg-black/20">
+                <img src="assets/images/dish-7.jpg" class="w-full h-64 object-cover mb-4 shadow-xl">
+                <p class="text-center text-[10px] uppercase tracking-widest font-bold text-garrison-gold">Dark Chocolate Lava</p>
             </div>
         </div>
     </section>
 
     <section id="contact" class="py-24 bg-garrison-green border-t border-garrison-gold/30">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-            <div class="border border-garrison-gold p-2">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d2979.0353974533964!2d44.8049197!3d41.6934398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440ced4271812d%3A0x6a05d554a36f52d9!2sJerusalem%20Square%2C%20Tbilisi!5e0!3m2!1sen!2sge!4v1711650000000!5m2!1sen!2sge" class="w-full h-[400px] grayscale" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="border border-garrison-gold p-1 bg-black/10">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.124508492!2d44.8041!3d41.6901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cf72323!2sJerusalem%20Square%2C%20Tbilisi!5e0!3m2!1sen!2sge!4v1620000000000" class="w-full h-[450px] grayscale" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <form action="https://formspree.io/f/xbdpdboz" method="POST" class="flex flex-col gap-4">
                 <input type="text" name="name" placeholder="Name" required class="bg-transparent border border-garrison-gold/50 p-4 outline-none focus:border-garrison-gold text-xs uppercase tracking-widest">
                 <input type="email" name="email" placeholder="Email" required class="bg-transparent border border-garrison-gold/50 p-4 outline-none focus:border-garrison-gold text-xs uppercase tracking-widest">
-                <textarea name="message" placeholder="Message" rows="5" required class="bg-transparent border border-garrison-gold/50 p-4 outline-none focus:border-garrison-gold text-xs uppercase tracking-widest"></textarea>
+                <textarea name="message" placeholder="Message" rows="6" required class="bg-transparent border border-garrison-gold/50 p-4 outline-none focus:border-garrison-gold text-xs uppercase tracking-widest"></textarea>
                 <button type="submit" class="bg-garrison-gold text-garrison-green font-bold py-5 hover:bg-white transition duration-500 uppercase text-xs tracking-[0.3em]">Send Message</button>
             </form>
         </div>

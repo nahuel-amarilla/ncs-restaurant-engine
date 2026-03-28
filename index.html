@@ -6,19 +6,13 @@
     <title>Garrison | Premium Dining Experience</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        'garrison-green': '#1B2420',
-                        'garrison-gold': '#C4A47C',
-                    },
-                    fontFamily: {
-                        serif: ['Playfair Display', 'serif'],
-                        sans: ['Inter', 'sans-serif'],
-                    }
+                    colors: { 'garrison-green': '#1B2420', 'garrison-gold': '#C4A47C' },
+                    fontFamily: { serif: ['Playfair Display', 'serif'], sans: ['Inter', 'sans-serif'] }
                 }
             }
         }
@@ -27,16 +21,22 @@
 <body class="bg-garrison-green text-white font-sans overflow-x-hidden">
 
     <nav class="fixed top-8 right-8 z-50">
-        <button class="w-12 h-12 flex flex-col justify-center items-center gap-1.5 border border-garrison-gold rounded-full bg-black/20 hover:bg-garrison-gold transition-all duration-300">
+        <button id="menu-btn" class="w-12 h-12 flex flex-col justify-center items-center gap-1.5 border border-garrison-gold rounded-full bg-black/40 hover:bg-garrison-gold transition-all duration-300">
             <span class="w-6 h-0.5 bg-garrison-gold"></span>
             <span class="w-6 h-0.5 bg-garrison-gold"></span>
         </button>
     </nav>
 
+    <div id="mobile-menu" class="fixed inset-0 bg-garrison-green z-40 hidden flex-col items-center justify-center space-y-8 text-3xl font-serif">
+        <a href="#menu" class="hover:text-garrison-gold transition">Menu</a>
+        <a href="#about" class="hover:text-garrison-gold transition">About Us</a>
+        <a href="#contact" class="hover:text-garrison-gold transition">Contact</a>
+    </div>
+
     <header class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <div class="hero-zoom w-full h-full bg-cover bg-center" style="background-image: url('./assets/images/hero-interior.jpg');"></div>
-            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="hero-zoom w-full h-full bg-cover bg-center" style="background-image: url('assets/images/hero-interior.jpg');"></div>
+            <div class="absolute inset-0 bg-black/50"></div>
         </div>
         <div class="relative z-10 text-center">
             <h1 class="font-serif text-6xl md:text-8xl mb-2 tracking-tight">A Taste of Excellence</h1>
@@ -45,101 +45,64 @@
     </header>
 
     <section id="menu" class="py-24 max-w-7xl mx-auto px-6">
-        <h2 class="font-serif text-5xl text-center mb-16 text-garrison-gold">Our Selection</h2>
+        <h2 class="font-serif text-5xl text-center mb-16 text-garrison-gold uppercase tracking-widest">Our Selection</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="menu-item border border-garrison-gold/30 p-1 bg-black/10">
-                <img src="./assets/images/dish-1.jpg" class="w-full h-56 object-cover mb-4">
-                <div class="p-4 text-center">
-                    <h4 class="text-xs uppercase tracking-widest font-bold">Dry-Aged Ribeye</h4>
-                </div>
+            <div class="menu-item border border-garrison-gold/30 p-1 bg-black/10 transition-transform duration-500">
+                <img src="assets/images/dish-1.jpg" class="w-full h-56 object-cover">
+                <div class="p-4 text-center text-[10px] uppercase tracking-[0.2em] font-bold">Dry-Aged Ribeye</div>
             </div>
-            <div class="menu-item border border-garrison-gold/30 p-1 bg-black/10">
-                <img src="./assets/images/dish-2.jpg" class="w-full h-56 object-cover mb-4">
-                <div class="p-4 text-center">
-                    <h4 class="text-xs uppercase tracking-widest font-bold">Pistachio Crusted Lamb</h4>
-                </div>
+            <div class="menu-item border border-garrison-gold/30 p-1 bg-black/10 transition-transform duration-500">
+                <img src="assets/images/dish-2.jpg" class="w-full h-56 object-cover">
+                <div class="p-4 text-center text-[10px] uppercase tracking-[0.2em] font-bold">Pistachio Crusted Lamb</div>
             </div>
-            <div class="menu-item border border-garrison-gold/30 p-1 bg-black/10">
-                <img src="./assets/images/dish-3.jpg" class="w-full h-56 object-cover mb-4">
-                <div class="p-4 text-center">
-                    <h4 class="text-xs uppercase tracking-widest font-bold">Heritage Wagyu Burger</h4>
-                </div>
+            <div class="menu-item border border-garrison-gold/30 p-1 bg-black/10 transition-transform duration-500">
+                <img src="assets/images/dish-3.jpg" class="w-full h-56 object-cover">
+                <div class="p-4 text-center text-[10px] uppercase tracking-[0.2em] font-bold">Wagyu Burger</div>
             </div>
-            <div class="menu-item border border-garrison-gold/30 p-1 bg-black/10">
-                <img src="./assets/images/dish-4.jpg" class="w-full h-56 object-cover mb-4">
-                <div class="p-4 text-center">
-                    <h4 class="text-xs uppercase tracking-widest font-bold">Black Truffle Risotto</h4>
-                </div>
-            </div>
-            <div class="menu-item border border-garrison-gold/30 p-1 bg-black/10">
-                <img src="./assets/images/dish-5.jpg" class="w-full h-56 object-cover mb-4">
-                <div class="p-4 text-center">
-                    <h4 class="text-xs uppercase tracking-widest font-bold">Saffron Lobster Ravioli</h4>
-                </div>
-            </div>
-            <div class="menu-item border border-garrison-gold/30 p-1 bg-black/10">
-                <img src="./assets/images/dish-6.jpg" class="w-full h-56 object-cover mb-4">
-                <div class="p-4 text-center">
-                    <h4 class="text-xs uppercase tracking-widest font-bold">Gold Leaf Tiramisu</h4>
-                </div>
-            </div>
-            <div class="menu-item border border-garrison-gold/30 p-1 bg-black/10">
-                <img src="./assets/images/dish-7.jpg" class="w-full h-56 object-cover mb-4">
-                <div class="p-4 text-center">
-                    <h4 class="text-xs uppercase tracking-widest font-bold">Dark Chocolate Lava</h4>
-                </div>
+            <div class="menu-item border border-garrison-gold/30 p-1 bg-black/10 transition-transform duration-500">
+                <img src="assets/images/dish-4.jpg" class="w-full h-56 object-cover">
+                <div class="p-4 text-center text-[10px] uppercase tracking-[0.2em] font-bold">Black Truffle Risotto</div>
             </div>
         </div>
     </section>
 
     <section id="about" class="py-24 bg-white text-garrison-green">
         <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-6">
-                <h2 class="font-serif text-5xl mb-2 text-stone-900">Our Heritage</h2>
-                <div class="h-1 w-20 bg-garrison-gold mb-8"></div>
-                <h3 class="font-serif text-2xl text-garrison-gold italic">A Culinary Sanctuary in Jerusalem Square</h3>
-                <p class="text-lg text-stone-700 leading-relaxed font-light">
-                    Founded by visionary **Chef Dato Gogiashvili**, Garrison is a meticulously architected sanctuary where Georgia’s rich heritage meets modern gastronomy. 
+            <div>
+                <h2 class="font-serif text-5xl mb-6">Our Heritage</h2>
+                <h3 class="font-serif text-2xl text-garrison-gold italic">Chef Dato Gogiashvili</h3>
+                <p class="text-stone-700 font-light leading-relaxed mb-6">
+                    A culinary sanctuary in Jerusalem Square. Garrison merges ancient Georgian secrets from Svaneti with modern culinary excellence.
                 </p>
-                <p class="text-lg text-stone-700 leading-relaxed font-light">
-                    Inspired by the beauty of Svaneti, we prioritize **Provenance**, **Simplicity**, and an unyielding commitment to **Security**. Garrison is where the past meets the future of dining.
+                <p class="text-stone-700 font-light leading-relaxed">
+                    We invite you to experience a space where natural light illuminates every plate, crafted with integrity and foraged ingredients.
                 </p>
             </div>
             <div class="relative group">
-                <img src="./assets/images/hero-interior.jpg" class="shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 rounded-sm">
-                <div class="absolute -bottom-6 -left-6 w-40 h-40 border-8 border-garrison-gold -z-10 group-hover:scale-105 transition-transform duration-500 hidden md:block"></div>
+                <img src="assets/images/hero-interior.jpg" class="shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 rounded-sm">
+                <div class="absolute -bottom-6 -left-6 w-40 h-40 border-8 border-garrison-gold -z-10 hidden md:block"></div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="py-24 bg-garrison-green border-t border-garrison-gold/30">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="font-serif text-5xl text-center mb-16 text-garrison-gold">Contact Us</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="border border-garrison-gold p-2">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.123!2d44.805!3d41.691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cf6b69b3f3b%3A0x6b9b3f3b!2sJerusalem%20Square%2C%20Tbilisi!5e0!3m2!1sen!2sge!4v123456789" 
-                        class="w-full h-[450px] grayscale hover:grayscale-0 transition-all duration-500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-
-                <form action="https://formspree.io/f/xbdpdboz" method="POST" class="flex flex-col gap-4 text-sm uppercase tracking-widest">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <input type="text" name="name" placeholder="First Name" required class="bg-transparent border border-garrison-gold/50 p-4 focus:border-garrison-gold outline-none transition-colors">
-                        <input type="text" name="lastname" placeholder="Last Name" required class="bg-transparent border border-garrison-gold/50 p-4 focus:border-garrison-gold outline-none transition-colors">
-                    </div>
-                    <input type="email" name="email" placeholder="Email Address" required class="bg-transparent border border-garrison-gold/50 p-4 focus:border-garrison-gold outline-none transition-colors">
-                    <input type="text" name="subject" placeholder="Subject" class="bg-transparent border border-garrison-gold/50 p-4 focus:border-garrison-gold outline-none transition-colors">
-                    <textarea name="message" placeholder="Message" rows="5" required class="bg-transparent border border-garrison-gold/50 p-4 focus:border-garrison-gold outline-none transition-colors"></textarea>
-                    <button type="submit" class="bg-garrison-gold text-garrison-green font-bold py-5 hover:bg-white transition duration-500">Send Message</button>
-                </form>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+            <div class="border border-garrison-gold p-2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d2979.0353974533964!2d44.8049197!3d41.6934398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440ced4271812d%3A0x6a05d554a36f52d9!2sJerusalem%20Square%2C%20Tbilisi!5e0!3m2!1sen!2sge!4v1711650000000!5m2!1sen!2sge" class="w-full h-[400px] grayscale" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
+            <form action="https://formspree.io/f/xbdpdboz" method="POST" class="flex flex-col gap-4">
+                <input type="text" name="name" placeholder="Name" required class="bg-transparent border border-garrison-gold/50 p-4 outline-none focus:border-garrison-gold text-xs uppercase tracking-widest">
+                <input type="email" name="email" placeholder="Email" required class="bg-transparent border border-garrison-gold/50 p-4 outline-none focus:border-garrison-gold text-xs uppercase tracking-widest">
+                <textarea name="message" placeholder="Message" rows="5" required class="bg-transparent border border-garrison-gold/50 p-4 outline-none focus:border-garrison-gold text-xs uppercase tracking-widest"></textarea>
+                <button type="submit" class="bg-garrison-gold text-garrison-green font-bold py-5 hover:bg-white transition duration-500 uppercase text-xs tracking-[0.3em]">Send Message</button>
+            </form>
         </div>
     </section>
 
-    <footer class="py-10 text-center text-xs text-stone-500 uppercase tracking-widest border-t border-garrison-gold/10">
-        Architected by NCS Safety | Encrypted Infrastructure | Tbilisi, Georgia
+    <footer class="py-10 text-center text-[10px] text-stone-500 uppercase tracking-widest border-t border-garrison-gold/10">
+        Architected by NCS Safety | Jerusalem Square, Tbilisi, Georgia
     </footer>
 
-    <script src="./assets/js/animations.js"></script>
+    <script src="assets/js/animations.js"></script>
 </body>
 </html>

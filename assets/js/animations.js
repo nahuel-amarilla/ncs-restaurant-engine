@@ -1,34 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Efecto de aparición para los elementos del Hero
-    const heroContent = document.querySelector('.relative.z-10');
-    
-    // Aplicamos un pequeño delay para que la imagen cargue primero
-    setTimeout(() => {
-        heroContent.style.opacity = '1';
-        heroContent.style.transform = 'translateY(0)';
-    }, 500);
+    // --- LÓGICA DEL MENÚ HAMBURGUESA ---
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-    // 2. Observer para que los platos aparezcan cuando hacés scroll
-    const observerOptions = {
-        threshold: 0.2
-    };
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            // Alterna la visibilidad del menú
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
 
+        // Cerrar menú al hacer click en un enlace
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+
+    // --- ANIMACIÓN DE APARICIÓN (Scroll) ---
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
-    // Seleccionamos todos los platos del menú
-    const menuItems = document.querySelectorAll('.menu-item');
-    menuItems.forEach(item => {
-        // Estado inicial invisible para la animación
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        item.style.transition = 'all 0.8s ease-out';
+    document.querySelectorAll('.menu-item').forEach(item => {
+        item.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
         observer.observe(item);
     });
 });
